@@ -55,3 +55,10 @@ const Component = ({
 
 - I'm happy with how the project organization turned out. I made it a point to separate each Component of the app 'by feature' (somewhat a la [ducks](https://github.com/erikras/ducks-modular-redux)). Check out the `components` directory to get an idea.
   - Along those lines, every React component has an adjacent, similarly-named CSS file to help keep styles organized.
+
+## Where to go from here
+- Refactor, use smarter CSS
+- Mobile compatibility
+  - Work in the ReactDnd [touch backend](https://github.com/yahoo/react-dnd-touch-backend).
+  - Add a "pull to refresh" feature
+- Add a custom `canvas` loader
