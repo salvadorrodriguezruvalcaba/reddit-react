@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+.DndLink {
+  background-color: white;
+  min-height: auto;
+  padding: 15px;
+  height: 42%;
+  color: #222;
+}
+.DndLink-sprite {
+  max-width: auto;
+}
+||||||| merged common ancestors
+=======
+.DropTarget {
+  background-color: white;
+  min-height: auto;
+  height: 42%;
+  color: #0BB7FF;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+.DropTarget-img {
+  align-self: center;
+}
+.DropTarget-container {
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+.mail {
+  margin-top: 25px;
+}
+>>>>>>> update & refactor styles

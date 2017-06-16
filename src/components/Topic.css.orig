@@ -1,0 +1,78 @@
+.Topic {
+  height: 150px;
+  width: 100%;
+  padding: 25px 0;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  color: #0BB7FF;
+  line-height: normal;
+  border-bottom: 1px solid rgba(117, 120, 133, 0.6);
+}
+.Topic:hover {
+  background-color: white;
+}
+.Topic-details {
+  flex-direction: column;
+  text-align: left;
+  line-height: 40px;
+  width: 100%;
+}
+/* TODO: replace with something a little safer */
+.Topic-details > * {
+  padding: 10px 0;
+}
+.Topic-thumbnail {
+  height: 90px;
+  min-width: 90px;
+  max-width: 90px;
+  margin: 0 25px;
+  border: 5px solid #DEDFED;
+  border-radius: 100px;
+  object-fit: fill;
+<<<<<<< HEAD
+  align-self: center;
+||||||| merged common ancestors
+  /* TODO: 'scale to fill' image resolution */
+=======
+  align-self: center;
+  /* TODO: 'scale to fill' image resolution */
+>>>>>>> update & refactor styles
+}
+.Topic-title {
+  color: #222;
+  line-height: normal;
+}
+.Topic-stats {
+  display: flex;
+  flex-direction: row;
+  width: 41.2%;
+  justify-content: space-between;
+  color: #757885;
+  font-size: 14px;
+  line-height: normal;
+  /* TODO: make this not iffy */
+  padding: 15px 0;
+}
+.Topic-stat {
+  display: flex;
+}
+.Topic-statDataCount {
+  font-size: 14px;
+  color: #757885;
+}
+.sprite {
+  object-fit: none;
+  width: 16px;
+  height: 16px;
+  margin: auto 10px;
+}
+.comments-sprite {
+  object-position: 0 0;
+}
+.ups-sprite {
+  object-position: 0 -16px;
+}
+.downs-sprite {
+  object-position: 0 -32px;
+}

@@ -1,0 +1,47 @@
+.Overlay-DndComponent {
+  background-color: white;
+  color: #222;
+  border-radius: 25px;
+  flex-direction: column;
+  justify-content: center;
+}
+.DraggableTopic {
+<<<<<<< HEAD
+  width: 25%;
+||||||| merged common ancestors
+  max-width: 33.3%;
+=======
+  max-width: 27%;
+  height: 95%;
+>>>>>>> update & refactor styles
+  background-color: white;
+  color: #222;
+  padding: 15px;
+  padding-top: 25px;
+  border-radius: 25px;
+<<<<<<< HEAD
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+||||||| merged common ancestors
+=======
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+>>>>>>> update & refactor styles
+}
+.DraggableTopic-TopicStatRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 170%;
+}
+.DraggableTopic-TopicAuthor {
+  color: #0BB7FF;
+}
+.DraggableTopic-TopicTitle {
+  color: #222;
+  font-size: 16px;
+  line-height: 150%;
+}

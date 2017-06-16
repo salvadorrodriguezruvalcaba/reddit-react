@@ -1,0 +1,28 @@
+.Searchbar {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.Searchbar-form {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 12px 0;
+}
+.Searchbar-input {
+  width: 33%;
+  height: 36px;
+  align-self: stretch;
+  padding: 0 15px;
+  font: inherit;
+  font-size: 20px;
+  color: #0BB7FF;
+  border-radius: 25px;
+  border-style: none;
+  transition: width 300ms ease;
+}
+.Searchbar-input:focus {
+  width: 66%;
+  outline: none;
+}

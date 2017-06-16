@@ -1,0 +1,98 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
+import DraggableTopic from './DraggableTopic';
+import DndLink from './DndLink';
+import './Overlay.css';
+
+const Overlay = ({
+  overlayIsVisible, topic,
+<<<<<<< HEAD:src/components/DndOverlay/Overlay.js
+  handleCloseOverlay, emailDroppedItem, openDroppedItemOnReddit,
+||||||| merged common ancestors
+  handleCloseOverlay, shareRedditTopic,
+=======
+  dispatchShareTopic, handleCloseOverlay, setShareType,
+>>>>>>> commit before rollback and refactor:src/components/Overlay.js
+}) => (
+  <div
+    className='Overlay'
+    id='Overlay'
+    /* pass the element's `id` up to OverlayWrapper
+    * (only toggle visibility when the background is clicked)
+    */
+    onClick={(e) => handleCloseOverlay(e.target.id)}
+    style={{
+      display: !!overlayIsVisible ? 'flex' : 'none',
+    }}>
+    <div
+      style={{
+        visiblity: !!overlayIsVisible ? 'visible' : 'hidden',
+        opacity: !!overlayIsVisible ? 1 : 0,
+        animation: 'fade-in 600ms',
+      }}
+      className='Overlay-DndContainer'
+      id='Overlay-DndContainer'
+    >
+      <DraggableTopic
+        topic={topic}
+      />
+      <h2 className='Overlay-DragTitle'>
+        Drag the card on the left to the desired action
+      </h2>
+      <div className='Overlay-DndLinkContainer'>
+        <DndLink
+<<<<<<< HEAD:src/components/DndOverlay/Overlay.js
+          linkType={'reddit'}
+          shareText={'Open on Reddit'}
+          dndType={'topic/open'}
+          openDroppedItemOnReddit={(item) => openDroppedItemOnReddit(item)}
+||||||| merged common ancestors
+          linkType='reddit'
+          shareText='Open on Reddit'
+          shareTopic={(topic, type) => shareRedditTopic(topic, type)}
+=======
+          linkType='reddit'
+          shareText='Open on Reddit'
+          setSharedTopic={(topic, type) => setShareType(topic, type)}
+          dispatchShareTopic={(topic) => dispatchShareTopic(topic)}
+>>>>>>> commit before rollback and refactor:src/components/Overlay.js
+        />
+        <DndLink
+<<<<<<< HEAD:src/components/DndOverlay/Overlay.js
+          linkType={'mail'}
+          shareText={'Email to a friend'}
+          dndType={'topic/mail'}
+          emailDroppedItem={(item) => emailDroppedItem(item)}
+||||||| merged common ancestors
+          linkType='mail'
+          shareText='Email to a Friend'
+          shareTopic={(topic, type) => shareRedditTopic(topic, type)}
+=======
+          linkType='mail'
+          shareText='Email to a Friend'
+          setSharedTopic={(topic, type) => setShareType(topic, type)}
+>>>>>>> commit before rollback and refactor:src/components/Overlay.js
+        />
+      </div>
+    </div>
+  </div>
+);
+Overlay.propTypes = {
+  emailDroppedItem: PropTypes.func.isRequired,
+  handleCloseOverlay: PropTypes.func.isRequired,
+  openDroppedItemOnReddit: PropTypes.func.isRequired,
+  overlayIsVisible: PropTypes.bool.isRequired,
+  topic: PropTypes.object,
+<<<<<<< HEAD:src/components/DndOverlay/Overlay.js
+||||||| merged common ancestors
+  handleCloseOverlay: PropTypes.func.isRequired,
+  shareRedditTopic: PropTypes.func.isRequired,
+=======
+  handleCloseOverlay: PropTypes.func.isRequired,
+  setShareType: PropTypes.func.isRequired,
+>>>>>>> commit before rollback and refactor:src/components/Overlay.js
+}
+
+export default DragDropContext(HTML5Backend)(Overlay);

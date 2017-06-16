@@ -1,0 +1,15 @@
+/* TODO: fine-tune container height to match */
+.Header {
+  padding: 0px 16.7%;
+  background-color: #0BB7FF;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: 500;
+  flex-direction: row;
+  box-sizing: border-box;
+}
