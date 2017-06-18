@@ -5,29 +5,24 @@ import constants from '../../constants';
 import unknown from '../../assets/images/unknown.png';
 import './Topic.css';
 
-/* If there's only 1 vote / comment,
- * format the string to read "1 up" / "1 comment"
- * (instead of "1 ups" / "1 comments")
- */
 const { helpers } = constants;
-const { formatVotes } = helpers;
+const {
+  formatVotes,
+  isValidURL,
+} = helpers;
 
+const isValidImageURL = (thumbnail) =>
+  isValidURL(thumbnail) ? thumbnail : unknown;
 const Topic = ({
   topic,
   handleClick,
 }) => (
   <div className='Topic' onClick={() => handleClick(topic)}>
-    { topic.data.thumbnail === "self" ?
-      <img
-        className='Topic-thumbnail'
-        src={unknown}
-        alt={topic.title}
-      /> : <img
-        className='Topic-thumbnail'
-        src={topic.data.thumbnail}
-        alt={"none"}
-           />
-    }
+    <img
+      className='Topic-thumbnail'
+      src={isValidImageURL(topic.data.thumbnail)}
+      alt={topic.title}
+    />
     {
       /* NB:
         `Topic-details` is `flex-direction: column`,
