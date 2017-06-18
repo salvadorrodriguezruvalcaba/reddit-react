@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { AllHtmlEntities } from 'html-entities';
 import TopicStat from './TopicStat';
 import constants from '../../constants';
 import unknown from '../../assets/images/unknown.png';
@@ -10,9 +11,10 @@ const {
   formatVotes,
   isValidURL,
 } = helpers;
-
+const entities = new AllHtmlEntities();
 const isValidImageURL = (thumbnail) =>
   isValidURL(thumbnail) ? thumbnail : unknown;
+
 const Topic = ({
   topic,
   handleClick,
@@ -35,7 +37,7 @@ const Topic = ({
         {topic.data.author}
       </p>
       <p className='Topic-title'>
-        {topic.data.title}
+        {entities.decode(topic.data.title)}
       </p>
       <div className='Topic-stats'>
         <TopicStat
