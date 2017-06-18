@@ -11,6 +11,9 @@ const {
   formatVotes,
   isValidURL,
 } = helpers;
+
+// Decode raw HTML ASCII codes in topic data
+// (e.g. "&amp;" -> "&")
 const entities = new AllHtmlEntities();
 const isValidImageURL = (thumbnail) =>
   isValidURL(thumbnail) ? thumbnail : unknown;
